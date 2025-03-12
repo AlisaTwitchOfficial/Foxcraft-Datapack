@@ -6,7 +6,25 @@ execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run 
 execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~ ~2 ~3 minecraft:polished_blackstone_button[powered=true] run execute positioned ~ ~2 ~4 as @a[distance=..3] as @s run playsound minecraft:block.vault.activate block @a ~ ~ ~ 50 2
 execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~ ~2 ~3 minecraft:polished_blackstone_button[powered=true] run execute positioned ~ ~2 ~4 as @a[distance=..3] as @s run scoreboard players add @s RedSickness 1
 execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~ ~2 ~3 minecraft:polished_blackstone_button[powered=true] run execute positioned ~ ~2 ~3 run setblock ~ ~ ~ minecraft:polished_blackstone_button[powered=false,face=wall,facing=south] replace
+# /\ South Button
 
+execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~ ~2 ~-3 minecraft:polished_blackstone_button[powered=true] run particle minecraft:sculk_soul ~ ~2 ~-4 0.5 0.5 0.5 0.05 50 normal @a
+execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~ ~2 ~-3 minecraft:polished_blackstone_button[powered=true] run execute positioned ~ ~2 ~-4 as @a[distance=..3] as @s run playsound minecraft:block.vault.activate block @a ~ ~ ~ 50 2
+execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~ ~2 ~-3 minecraft:polished_blackstone_button[powered=true] run execute positioned ~ ~2 ~-4 as @a[distance=..3] as @s run scoreboard players add @s RedSickness 1
+execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~ ~2 ~-3 minecraft:polished_blackstone_button[powered=true] run execute positioned ~ ~2 ~-3 run setblock ~ ~ ~ minecraft:polished_blackstone_button[powered=false,face=wall,facing=north] replace
+# /\ North Button
+
+execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~3 ~2 ~ minecraft:polished_blackstone_button[powered=true] run particle minecraft:sculk_soul ~4 ~2 ~ 0.5 0.5 0.5 0.05 50 normal @a
+execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~3 ~2 ~ minecraft:polished_blackstone_button[powered=true] run execute positioned ~4 ~2 ~ as @a[distance=..3] as @s run playsound minecraft:block.vault.activate block @a ~ ~ ~ 50 2
+execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~3 ~2 ~ minecraft:polished_blackstone_button[powered=true] run execute positioned ~4 ~2 ~ as @a[distance=..3] as @s run scoreboard players add @s RedSickness 1
+execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~3 ~2 ~ minecraft:polished_blackstone_button[powered=true] run execute positioned ~3 ~2 ~ run setblock ~ ~ ~ minecraft:polished_blackstone_button[powered=false,face=wall,facing=east] replace
+# /\ East Button
+
+execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~-3 ~2 ~ minecraft:polished_blackstone_button[powered=true] run particle minecraft:sculk_soul ~-4 ~2 ~ 0.5 0.5 0.5 0.05 50 normal @a
+execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~-3 ~2 ~ minecraft:polished_blackstone_button[powered=true] run execute positioned ~-4 ~2 ~ as @a[distance=..3] as @s run playsound minecraft:block.vault.activate block @a ~ ~ ~ 50 2
+execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~-3 ~2 ~ minecraft:polished_blackstone_button[powered=true] run execute positioned ~-4 ~2 ~ as @a[distance=..3] as @s run scoreboard players add @s RedSickness 1
+execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ run execute if block ~-3 ~2 ~ minecraft:polished_blackstone_button[powered=true] run execute positioned ~-3 ~2 ~ run setblock ~ ~ ~ minecraft:polished_blackstone_button[powered=false,face=wall,facing=west] replace
+# /\ West Button
 
 
 execute at @e[type=minecraft:armor_stand,name=sator_pylon] positioned ~ ~ ~ unless block ~ ~ ~ minecraft:respawn_anchor[charges=4] run kill @e[type=minecraft:armor_stand,name=sator_pylon,distance=..3]
