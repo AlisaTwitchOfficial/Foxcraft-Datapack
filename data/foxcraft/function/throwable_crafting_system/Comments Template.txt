@@ -1,0 +1,19 @@
+# [A] Crafting Recipe Function. - [B] + [C] = [A]
+
+
+# /\ Confirmation Tellraw Command.
+
+
+# /\ Removes Rubidus Pestis Points.
+
+
+# /\ Removes The Secondary Crafting item. -|\ [C].
+
+
+# /\ Crafting Confirmation Sound.
+
+
+# /\ Summons [A] Item.
+
+
+# /\ Removes The Primary Crafting item. -|\ [B]. - Also Concludes Function.

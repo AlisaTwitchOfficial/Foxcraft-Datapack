@@ -1,0 +1,16 @@
+# Cured Meat Juice Crafting Recipe Function. - Fine Refined Repleted Dust + Rotten Flesh = Cured Meat Juice
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:glowstone_dust",count:1,components:{"minecraft:max_stack_size":80,"minecraft:custom_name":'{"bold":false,"color":"gold","italic":false,"text":"Fine Refined Repleted Dust"}'}}}] positioned ~ ~ ~ run kill @e[limit=1,type=item,distance=..3,nbt={Item:{id:"minecraft:rotten_flesh",count:1}}]
+# /\ Removes The Secondary Crafting item. -|\ Rotten Flesh.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:glowstone_dust",count:1,components:{"minecraft:max_stack_size":80,"minecraft:custom_name":'{"bold":false,"color":"gold","italic":false,"text":"Fine Refined Repleted Dust"}'}}}] positioned ~ ~ ~ run kill @e[limit=1,type=item,distance=..3,nbt={Item:{id:"minecraft:potion",count:2,components:{"minecraft:max_stack_size":99,"minecraft:custom_name":'{"bold":true,"italic":false,"text":"Rubidus Pestis Bottle"}'}}}]
+# /\ Removes The bottles item. -|\ 2 rubidus pestis bottles.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:glowstone_dust",count:1,components:{"minecraft:max_stack_size":80,"minecraft:custom_name":'{"bold":false,"color":"gold","italic":false,"text":"Fine Refined Repleted Dust"}'}}}] positioned ~ ~ ~ run playsound minecraft:entity.player.attack.crit master @a[distance=..20] ~ ~ ~ 20 0.9 0.5
+# /\ Crafting Confirmation Sound.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:glowstone_dust",count:1,components:{"minecraft:max_stack_size":80,"minecraft:custom_name":'{"bold":false,"color":"gold","italic":false,"text":"Fine Refined Repleted Dust"}'}}}] positioned ~ ~ ~ run summon item ~ ~ ~ {Item:{id:"minecraft:potion",count:2,components:{"minecraft:max_stack_size":64,"minecraft:custom_name":'{"bold":false,"italic":false,"text":"Cured Meat Juice"}',"minecraft:lore":['"Unapetizing mashed meat forced, edible but at the expense"','"of your tongue and sense of taste"','{"color":"red","text":"Edible, may cause you to feel holes forming in your brain."}'],"minecraft:food":{nutrition:6,saturation:8,can_always_eat:true,eat_seconds:1,effects:[{effect:{id:"minecraft:nausea",amplifier:0,duration:100},probability:0.01},{effect:{id:"minecraft:nausea",amplifier:0,duration:200},probability:0.01},{effect:{id:"minecraft:nausea",amplifier:0,duration:300},probability:0.01},{effect:{id:"minecraft:nausea",amplifier:0,duration:400},probability:0.01}]},"minecraft:potion_contents":{custom_color:7864320}}}}
+# /\ Summons Cured Meat Juice Item.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:glowstone_dust",count:1,components:{"minecraft:max_stack_size":80,"minecraft:custom_name":'{"bold":false,"color":"gold","italic":false,"text":"Fine Refined Repleted Dust"}'}}}] positioned ~ ~ ~ run kill @e[limit=1,distance=..3,type=item,nbt={Item:{id:"minecraft:glowstone_dust",count:1,components:{"minecraft:max_stack_size":80,"minecraft:custom_name":'{"bold":false,"color":"gold","italic":false,"text":"Fine Refined Repleted Dust"}'}}}]
+# /\ Removes The Primary Crafting item. -|\ Fine Refined Repleted Dust. - Also Concludes Function.

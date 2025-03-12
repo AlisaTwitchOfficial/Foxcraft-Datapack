@@ -1,0 +1,16 @@
+{
+    "name": "foxcraft:old_witness_house",
+    "fallback": "minecraft:empty",
+    "elements": [
+      {
+        "weight": 1,
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "foxcraft:old_witness_house",
+          "processors": "minecraft:empty",
+          "override_liquid_settings": "ignore_waterlogging"
+        }
+      }
+    ]
+  }

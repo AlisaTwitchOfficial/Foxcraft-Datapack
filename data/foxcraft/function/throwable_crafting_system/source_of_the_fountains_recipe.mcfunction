@@ -1,0 +1,19 @@
+# Source Of The Fountain Crafting Recipe Function. - World Seed + Water Bucket = Source Of The Fountain
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run tellraw @p [{"color":"#21FFF0","text":"Y"},{"color":"#2BF0F1","text":"o"},{"color":"#35E0F2","text":"u"},{"color":"#40D1F3","text":"r "},{"color":"#4AC1F4","text":"T"},{"color":"#54B2F5","text":"i"},{"color":"#5EA2F6","text":"n"},{"color":"#6893F7","text":"k"},{"color":"#7383F8","text":"e"},{"color":"#7D74F9","text":"r"},{"color":"#8764FA","text":"i"},{"color":"#9155FB","text":"n"},{"color":"#9B45FC","text":"g "},{"color":"#A636FD","text":"H"},{"color":"#B026FE","text":"a"},{"color":"#BA17FF","text":"s "},{"color":"#B917F8","text":"G"},{"color":"#AE26EB","text":"r"},{"color":"#A336DD","text":"a"},{"color":"#9845CF","text":"n"},{"color":"#8D55C2","text":"t"},{"color":"#8264B4","text":"e"},{"color":"#7774A7","text":"d "},{"color":"#6C8399","text":"R"},{"color":"#61938B","text":"e"},{"color":"#56A27E","text":"s"},{"color":"#4BB270","text":"u"},{"color":"#40C162","text":"l"},{"color":"#35D155","text":"t"},{"color":"#2AE047","text":"s"},{"color":"#14FF2C","text":"."}]
+# /\ Confirmation Tellraw Command.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run scoreboard players remove @p Red 200
+# /\ Removes 200 Rubidus Pestis Points.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run kill @e[limit=1,type=item,distance=..3,nbt={Item:{id:"minecraft:water_bucket",count:1}}]
+# /\ Removes The Secondary Crafting item. -|\ Water Bucket.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run playsound minecraft:entity.generic.splash master @a[distance=..20] ~ ~ ~ 20 1.5 0.5
+# /\ Crafting Confirmation Sound.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run summon item ~ ~ ~ {Item:{id:"minecraft:allay_spawn_egg",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"bold":true,"color":"dark_purple","italic":false,"text":"Source Of The Fountains"}',"minecraft:lore":['"A strange item in the form of an egg."','"Maybe using it can bring forth a force of nature."','{"bold":false,"color":"dark_red","italic":false,"obfuscated":false,"strikethrough":false,"text":"⚠Warning⚠ Using this egg will place a 3*7*3 structure.","underlined":false}','{"bold":false,"color":"dark_red","italic":false,"obfuscated":false,"strikethrough":false,"text":"That will ignore blocks around it and replace them.","underlined":false}'],"minecraft:custom_model_data":1,"minecraft:enchantment_glint_override":true,"minecraft:entity_data":{id:"minecraft:armor_stand",Marker:1b,Invisible:1b,CustomName:'"CommandExecuter1"'}}}}
+# /\ Summons Source Of The Fountain Item.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run kill @e[limit=1,type=item,distance=..3,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}]
+# /\ Removes The Primary Crafting item. -|\ World Seed. - Also Concludes Function.

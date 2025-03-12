@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "minecraft:shroomlight"
+  },
+  "result": {
+    "id": "minecraft:honeycomb",
+    "components": {
+      "minecraft:custom_model_data": 2,
+      "minecraft:custom_name": "{\"bold\":false,\"italic\":false,\"text\":\"Cooked Shroomlight Core\"}",
+      "minecraft:food": {
+        "nutrition": 4,
+        "saturation": 6,
+        "eat_seconds": 1.2
+      }
+    }
+  }
+}

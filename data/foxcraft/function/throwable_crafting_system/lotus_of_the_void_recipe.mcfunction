@@ -1,0 +1,19 @@
+# Lotus Of The Void Crafting Recipe Function. - World Seed + Apple = Lotus Of The Void
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run tellraw @p [{"color":"#21FFF0","text":"Y"},{"color":"#2BF0F1","text":"o"},{"color":"#35E0F2","text":"u"},{"color":"#40D1F3","text":"r "},{"color":"#4AC1F4","text":"T"},{"color":"#54B2F5","text":"i"},{"color":"#5EA2F6","text":"n"},{"color":"#6893F7","text":"k"},{"color":"#7383F8","text":"e"},{"color":"#7D74F9","text":"r"},{"color":"#8764FA","text":"i"},{"color":"#9155FB","text":"n"},{"color":"#9B45FC","text":"g "},{"color":"#A636FD","text":"H"},{"color":"#B026FE","text":"a"},{"color":"#BA17FF","text":"s "},{"color":"#B917F8","text":"G"},{"color":"#AE26EB","text":"r"},{"color":"#A336DD","text":"a"},{"color":"#9845CF","text":"n"},{"color":"#8D55C2","text":"t"},{"color":"#8264B4","text":"e"},{"color":"#7774A7","text":"d "},{"color":"#6C8399","text":"R"},{"color":"#61938B","text":"e"},{"color":"#56A27E","text":"s"},{"color":"#4BB270","text":"u"},{"color":"#40C162","text":"l"},{"color":"#35D155","text":"t"},{"color":"#2AE047","text":"s"},{"color":"#14FF2C","text":"."}]
+# /\ Confirmation Tellraw Command.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run scoreboard players remove @p Red 120
+# /\ Removes 120 Rubidus Pestis Points.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run kill @e[limit=1,type=item,distance=..3,nbt={Item:{id:"minecraft:apple",count:1}}]
+# /\ Removes The Secondary Crafting item. -|\ Apple.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run playsound minecraft:block.vault.close_shutter master @a[distance=..20] ~ ~ ~ 20 2 0.5
+# /\ Crafting Confirmation Sound.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run summon item ~ ~ ~ {Item:{id:"minecraft:popped_chorus_fruit",count:16,components:{"minecraft:max_stack_size":16,"minecraft:custom_name":'{"color":"dark_purple","text":"Lotus of the void"}',"minecraft:lore":['"A fruit made of inexplicable matter."','"Exhudes an addicting aroma in the air."'],"minecraft:custom_model_data":1,"minecraft:enchantment_glint_override":true,"minecraft:food":{nutrition:5,saturation:6,can_always_eat:true,eat_seconds:1,effects:[{effect:{id:"minecraft:absorption",amplifier:1,duration:2400,show_particles:1b,show_icon:1b},probability:0.50},{effect:{id:"minecraft:darkness",amplifier:0,duration:200,show_particles:1b,show_icon:1b},probability:0.25},{effect:{id:"minecraft:haste",amplifier:1,duration:4800,show_particles:0b,show_icon:1b},probability:0.50},{effect:{id:"minecraft:poison",amplifier:1,duration:20,show_particles:1b,show_icon:1b},probability:0.25},{effect:{id:"minecraft:glowing",amplifier:0,duration:120,show_particles:0b,show_icon:1b},probability:0.75}]}}}}
+# /\ Summons Lotus Of The Void Item.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run kill @e[limit=1,type=item,distance=..3,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}]
+# /\ Removes The Primary Crafting item. -|\ World Seed. - Also Concludes Function.

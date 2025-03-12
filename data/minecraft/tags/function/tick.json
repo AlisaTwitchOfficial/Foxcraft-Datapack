@@ -1,0 +1,11 @@
+{
+    "values": [
+        "foxcraft:tickandload/tick",
+        "foxcraft:tickandload/tickrecipecaller",
+        "foxcraft:tickandload/tickccustomitemproperties",
+        "foxcraft:tickandload/tick_rubidus_madness",
+        "foxcraft:tickandload/tick_natural_structures",
+        "foxcraft:tickandload/tickrecipecallerbottles",
+        "foxcraft:tickandload/tickrecipecallerexotic"
+    ]
+}

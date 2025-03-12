@@ -1,0 +1,19 @@
+# Fine Refined Repleted Dust Crafting Recipe Function. - Depleted Seed Powder + Glowstone Dust = Fine Refined Repleted Dust
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:blaze_powder",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gray","text":"Depleted Seed Powder"}'}}}] positioned ~ ~ ~ run tellraw @p [{"color":"#21FFF0","text":"Y"},{"color":"#2BF0F1","text":"o"},{"color":"#35E0F2","text":"u"},{"color":"#40D1F3","text":"r "},{"color":"#4AC1F4","text":"T"},{"color":"#54B2F5","text":"i"},{"color":"#5EA2F6","text":"n"},{"color":"#6893F7","text":"k"},{"color":"#7383F8","text":"e"},{"color":"#7D74F9","text":"r"},{"color":"#8764FA","text":"i"},{"color":"#9155FB","text":"n"},{"color":"#9B45FC","text":"g "},{"color":"#A636FD","text":"H"},{"color":"#B026FE","text":"a"},{"color":"#BA17FF","text":"s "},{"color":"#B917F8","text":"G"},{"color":"#AE26EB","text":"r"},{"color":"#A336DD","text":"a"},{"color":"#9845CF","text":"n"},{"color":"#8D55C2","text":"t"},{"color":"#8264B4","text":"e"},{"color":"#7774A7","text":"d "},{"color":"#6C8399","text":"R"},{"color":"#61938B","text":"e"},{"color":"#56A27E","text":"s"},{"color":"#4BB270","text":"u"},{"color":"#40C162","text":"l"},{"color":"#35D155","text":"t"},{"color":"#2AE047","text":"s"},{"color":"#14FF2C","text":"."}]
+# /\ Confirmation Tellraw Command.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:blaze_powder",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gray","text":"Depleted Seed Powder"}'}}}] positioned ~ ~ ~ run scoreboard players remove @p Red 10
+# /\ Removes 10 Rubidus Pestis Points.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:blaze_powder",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gray","text":"Depleted Seed Powder"}'}}}] positioned ~ ~ ~ run kill @e[limit=1,type=item,distance=..3,nbt={Item:{id:"minecraft:glowstone_dust",count:1}}]
+# /\ Removes The Secondary Crafting item. -|\ Glowstone Dust.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:blaze_powder",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gray","text":"Depleted Seed Powder"}'}}}] positioned ~ ~ ~ run playsound minecraft:block.glass.break master @a[distance=..20] ~ ~ ~ 20 0.7 0.5
+# /\ Crafting Confirmation Sound.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:blaze_powder",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gray","text":"Depleted Seed Powder"}'}}}] positioned ~ ~ ~ run summon item ~ ~ ~ {Item:{id:"minecraft:glowstone_dust",count:8,components:{"minecraft:max_stack_size":80,"minecraft:custom_name":'{"bold":false,"color":"gold","italic":false,"text":"Fine Refined Repleted Dust"}',"minecraft:lore":['"A refined form of the Depleted Dust obtained after the consumption"','"of a world seed, infused with glowstone and emitting"','"itself a natural small glow of a yellow-orange ish hue."','{"bold":true,"color":"dark_red","font":"illageralt","text":"seems to bond to organic matter well."}'],"minecraft:custom_model_data":1,"minecraft:enchantment_glint_override":true}}}
+# /\ Summons Fine Refined Repleted Dust Item.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:blaze_powder",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gray","text":"Depleted Seed Powder"}'}}}] positioned ~ ~ ~ run kill @e[limit=1,distance=..3,type=item,nbt={Item:{id:"minecraft:blaze_powder",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gray","text":"Depleted Seed Powder"}'}}}]
+# /\ Removes The Primary Crafting item. -|\ Depleted Seed Powder. - Also Concludes Function.

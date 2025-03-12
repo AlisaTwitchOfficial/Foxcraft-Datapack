@@ -1,0 +1,2 @@
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ if block ~ ~ ~ piston_head run function foxcraft:exotic_recipe/worldseed_piston_depletedseedpowder
+# /\ World seed into Depleted Seed Powder by piston squeezing.

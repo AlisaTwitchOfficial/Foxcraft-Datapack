@@ -1,0 +1,19 @@
+# Talisman Of Pestilence Crafting Recipe Function. - World Seed + Condensed Extract Of Unlife = Talisman Of Pestilence
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run tellraw @p [{"color":"#001AFF","text":"A"},{"color":"#0919F7","text":"r"},{"color":"#1118EE","text":"t"},{"color":"#1A17E6","text":"i"},{"color":"#2217DD","text":"f"},{"color":"#2B16D5","text":"a"},{"color":"#3315CC","text":"c"},{"color":"#3C14C4","text":"t "},{"color":"#4413BB","text":"O"},{"color":"#4D12B3","text":"f "},{"color":"#5511AA","text":"U"},{"color":"#5E10A2","text":"n"},{"color":"#661099","text":"i"},{"color":"#6F0F91","text":"m"},{"color":"#770E88","text":"a"},{"color":"#800D80","text":"g"},{"color":"#880C77","text":"i"},{"color":"#910B6F","text":"n"},{"color":"#990A66","text":"a"},{"color":"#A20A5E","text":"b"},{"color":"#AA0955","text":"l"},{"color":"#B3084D","text":"e "},{"color":"#BB0744","text":"P"},{"color":"#C4063C","text":"o"},{"color":"#CC0533","text":"w"},{"color":"#D5042B","text":"e"},{"color":"#DD0322","text":"r"},{"color":"#E6031A","text":"."},{"color":"#EE0211","text":"."},{"color":"#FF0000","text":"."}]
+# /\ Confirmation Tellraw Command.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run scoreboard players remove @p Red 40
+# /\ Removes 40 Rubidus Pestis Points.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run kill @e[limit=1,type=item,nbt={Item:{id:"minecraft:potion",count:1,components:{"minecraft:custom_name":'{"italic":false,"text":"Condensed Extract Of Unlife"}',"minecraft:potion_contents":{custom_color:2171169}}}},distance=..3]
+# /\ Removes The Secondary Crafting item. -|\ Condensed Extract Of Unlife.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run playsound minecraft:block.vault.close_shutter master @a[distance=..20] ~ ~ ~ 20 2 0.5
+# /\ Crafting Confirmation Sound.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run summon item ~ ~ ~ {Item:{id:"minecraft:phantom_membrane",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"bold":true,"color":"dark_red","text":"Talisman Of Pestilence"}',"minecraft:lore":['"This talismant almost looks organic, pulsating in your hands."','"as you hold it, you feel your link to the tree strengthen."'],"minecraft:fire_resistant":{},"minecraft:rarity":"epic","minecraft:enchantment_glint_override":true,"minecraft:attribute_modifiers":[{id:"oxygen_bonus",type:"generic.oxygen_bonus",amount:1,operation:"add_value",slot:"hand"}],"minecraft:custom_model_data":1}}}
+# /\ Summons Talisman Of Pestilence Item.
+
+execute at @e[type=item,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}] positioned ~ ~ ~ run kill @e[limit=1,type=item,distance=..3,nbt={Item:{id:"minecraft:honeycomb",count:1,components:{"minecraft:max_stack_size":1,"minecraft:custom_name":'{"color":"gold","text":"World Seed"}'}}}]
+# /\ Removes The Primary Crafting item. -|\ World Seed. - Also Concludes Function.
