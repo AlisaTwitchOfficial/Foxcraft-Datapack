@@ -1,0 +1,14 @@
+{
+    "structures": [
+      {
+        "structure": "foxcraft:rubidus_pestis_spire",
+        "weight": 2
+      }
+    ],
+    "placement": {
+      "type": "minecraft:random_spread",
+      "spacing": 30,
+      "separation": 10,
+      "salt": 0
+    }
+  }

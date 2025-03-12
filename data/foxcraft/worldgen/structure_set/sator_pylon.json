@@ -1,0 +1,14 @@
+{
+    "structures": [
+      {
+        "structure": "foxcraft:sator_pylon",
+        "weight": 3
+      }
+    ],
+    "placement": {
+      "type": "minecraft:random_spread",
+      "spacing": 38,
+      "separation": 20,
+      "salt": 0
+    }
+  }
