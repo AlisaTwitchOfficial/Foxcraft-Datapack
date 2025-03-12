@@ -1,4 +1,4 @@
-tellraw @a {"bold":true,"clickEvent":{"action":"open_url","value":"https://www.youtube.com/channel/UC2l4bIVrxjeDPknw2R7RonQ"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to go to the youtube channel of the datapack's creator :]"}]},"text":"Foxcraft Datapack Release Version 1 loaded successfully."}
+tellraw @a {"bold":true,"clickEvent":{"action":"open_url","value":"https://www.youtube.com/channel/UC2l4bIVrxjeDPknw2R7RonQ"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to go to the youtube channel of the datapack's creator :]"}]},"text":"Foxcraft Datapack Release Version 1.1 loaded successfully."}
 execute as @a as @s at @s run playsound minecraft:block.end_portal.spawn ambient @s ~ ~ ~ 1 0.5
 # /\ message to display the datapack loading in successfully.
 
